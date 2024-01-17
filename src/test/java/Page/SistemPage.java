@@ -37,7 +37,7 @@ public class SistemPage {
 
             } else {
 
-                milanoPage.ingresardatos(Snombre,apellido,0,"0","Otro","Ejecutivo test",
+                milanoPage.ingresardatos(Snombre,apellido,0,"0","Otro","ADRIANA OÑATE",
                         telefono,email,"15122023","sin direccion","santiago","sin comuna",
                         "telefono emergencia",telefonoE,email,"Principiante",15122023,0,"Miércoles P9 11:00 - 13:00");
 

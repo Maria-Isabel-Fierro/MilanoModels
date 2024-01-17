@@ -95,7 +95,7 @@ public class MilanoPage {
     private WebElement mensajeCorrectamenteElement;
 
     public boolean esperarMensajeRutNoIngresado() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        Utilities.esperar(2);
 
         // Esperar a que aparezca el mensaje "Datos insertados correctamente"
         By mensajeSelector = By.xpath("//div[contains(text(),'Ingrese un rut válido')]");
@@ -207,6 +207,8 @@ public class MilanoPage {
     }
     public void inRun(String rutt) {
         rut.sendKeys(rutt);
+        rut.sendKeys(Keys.TAB);
+        Utilities.esperar(1);
     }
     public void ingresardatos(String nom, String ape, int eda, String pasa,
                               String se, String eje, String numero, String eemail, String en,
@@ -241,8 +243,11 @@ public class MilanoPage {
         Select lista = new Select(curso);
         lista.selectByVisibleText(lis);
 
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(btnAgregarAlumno));
-        element.click();
+
+        Utilities.esperar(1);
+
+        btnAgregarAlumno.click();
+
 
     }
 
